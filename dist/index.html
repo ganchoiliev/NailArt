@@ -1,255 +1,732 @@
 <!DOCTYPE html>
-<html>
+<html lang="bg">
 
 <head>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88757742-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-88757742-2');
-  </script>
-    
-    <!-- Google Adsense -->
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-1812818687642442",
-        enable_page_level_ads: true
-      });
-    </script>
-
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Nail Art Silistra | Inna Todorova</title>
+  <title>Салон за красота Max | Инна Тодорова</title>
   <link rel="shortcut icon" href="img/nail.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="css/lightbox.min.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-  <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous" />
-  <meta name="description" content="Студио за маникюр, педикюр, ноктопластика и релакс Nail Art Silistra Inna Todorova във Силистра предлага модни фризури в луксозния си фризьорски салон, масажи, маникюр и педикюр, грим, грижи за косата, удължаване" />
 
-  <meta name="keywords" content="фризьорски салон, козметик, маникюр, ноктопластика, педикюр, масажи, прически, удължаване на коса, Маникюр - професионални материали,  уреди за ноктопластика и маникюр" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Using Playfair Display for elegant classic headers and Inter for clean sans-serif body -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+  <!-- Lightbox (if we still need gallery) -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/lightbox.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+  <meta name="description"
+    content="Салон за красота Max Инна Тодорова Силистра. Минималистично, премиум студио за маникюр." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Салон за красота Max | Инна Тодорова - Силистра">
+  <meta property="og:description" content="Премиум маникюр и педикюр студио в Силистра. Класически маникюр, гел лак, ноктопластика и педикюр.">
+  <meta property="og:image" content="https://nailart.cc/img/hero_plum.png">
+  <meta property="og:url" content="https://nailart.cc/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="bg_BG">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Салон за красота Max | Инна Тодорова">
+  <meta name="twitter:description" content="Премиум маникюр и педикюр студио в Силистра.">
+  <meta name="twitter:image" content="https://nailart.cc/img/hero_plum.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Салон за красота Max",
+    "image": "https://nailart.cc/img/hero_plum.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Генерал Колев 7 А",
+      "addressLocality": "Силистра",
+      "addressCountry": "BG",
+      "postalCode": "7500"
+    },
+    "telephone": "+359896826094",
+    "url": "https://nailart.cc/",
+    "priceRange": "€€",
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "sameAs": ["https://www.facebook.com/NailArtInnaTodorova/"]
+  }
+  </script>
 </head>
 
 <body>
-  <header class="showcase">
-    <div class="content">
-      <img src="logo.png" alt="logo" class="logo" />
-      <div class="title">Nail Art Silistra Inna Todorova</div>
-      <div class="text">
-        "Най-хубавият цвят на света е този, който ти подхожда."
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">BEAUTY SALON MAX</div>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloader-fill"></div>
       </div>
+      <div class="preloader-percent" id="preloader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">BEAUTY SALON MAX</a>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">За нас</a></li>
+        <li><a href="#services" class="nav-link">Услуги</a></li>
+        <li><a href="#gallery" class="nav-link">Галерия</a></li>
+        <li><a href="#contact" class="nav-link">Контакти</a></li>
+        <li><a href="#pricing" class="nav-link">Цени</a></li>
+        <li class="mobile-nav-contact">
+          <a href="tel:+359896826094" class="nav-link"><i class="fas fa-phone-alt"></i> +359 89 682 6094</a>
+        </li>
+      </ul>
+      <a href="#contact" class="btn btn-outline">Запази час</a>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
   </header>
 
-  <!-- Services -->
-  <section class="services">
-    <div class="container grid-3 center">
-      <div>
-        <i class="fab fa-r-project fa-3x"></i>
-        <h3>Професионализъм</h3>
-        <p>
-          Nail Art Силистра - едни от водещите в браншa. Нашите специалисти ще се погрижат за Вашия добър външен вид.
-        </p>
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-content pop-in window-load">
+      <h1 class="hero-title">MAX <span class="stylized-letter">BEAUTY</span></h1>
+      <p class="hero-subtitle">Насладете се на премиум маникюр и педикюр изживяване.</p>
+      <a href="#services" class="btn btn-outline mt-1">Разгледай услугите</a>
+    </div>
+  </section>
+
+  <!-- Interactive 360 Scroll Sequence -->
+  <section class="scroll-sequence-section" id="interactive-bottle">
+    <div class="sticky-container">
+      <div class="scroll-overlay-text hidden-scroll delay-100" id="bottle-text">
+        <h2>Премиум Качество</h2>
+        <p>Скролнете надолу, за да разгледате</p>
       </div>
-      <div>
-        <i class="fas fa-users fa-3x"></i>
-        <h3>Качество</h3>
-        <p>
-          Персоналът който работи за Вас ще ви предложи високо качество на услугите, любезно отношение, приятна и уютна
-          атмосфера.
-        </p>
+      <canvas id="bottle-canvas"></canvas>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-section" id="about">
+    <div class="container text-center py-section">
+      <h2 class="section-title pop-in">ЗА Н<span class="stylized-letter">АС</span></h2>
+      <div class="about-image-wrapper hidden-scroll delay-100">
+        <img src="img/about_bottles.png" alt="Премиум лакове за нокти" class="about-image">
       </div>
-      <div>
-        <i class="fas fa-briefcase fa-3x"></i>
-        <h3>Престиж</h3>
-        <p>
-          При нас винаги можете да разчитате на перфектно обслужване и
-          материали от водещите марки на пазара.
+      <div class="about-text hidden-scroll delay-200">
+        <h3 class="about-subtitle">Насладете се на най-доброто изживяване в грижата за ноктите с Max Beauty</h3>
+        <p class="about-desc">
+          Вашата премиум дестинация за стил и изтънченост във всеки маникюр и педикюр. Нашият салон е посветен
+          на това да ви предостави несравнимо обслужване, съчетавайки високо качество с артистичност, за да създадем
+          зашеметяващи
+          резултати, които
+          отразяват вашия уникален стил.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section class="about bg-light">
-    <div class="container">
-      <div class="grid-2">
-        <div class="center small"><i class="fas fa-map-marked-alt fa-10x"></i></div>
-        <div>
-          <h3>Свържи се с нас</h3>
-          <p><i class="fas fa-mobile-alt fa-1x"></i> Телефон: +359 89 682 6094</p>
-          <p><i class="fas fa-map-marker-alt fa-1x"></i> Адрес: Генерал Колев 7 А
-            Silistra 7500</p>
-          <p><i class="fas fa-envelope-open fa-1x"></i> Имейл: inna.todorova@gmail.com</p>
-          <p><i class="fab fa-facebook-square fa-1x"></i> Facebook: <a href="https://www.facebook.com/NailArtInnaTodorova/"
-              target="_blank">facebook.com/NailArtInnaTodorova</a></p>
-          <p><i class="fas fa-envelope-open fa-1x"></i> Работно време: 10:00 - 18:00, Събота 10:00 - 16:00</p>
+  <!-- Services Carousel (3 Tilted Cards) -->
+  <section class="services-section" id="services">
+    <div class="container text-center py-section">
+      <h2 class="section-title hidden-scroll">УСЛУ<span class="stylized-letter">Г</span>И</h2>
+      <p class="section-subtitle hidden-scroll delay-100">Имаме всичко необходимо, за да се насладите</p>
+
+      <div class="service-carousel">
+        <div class="service-card tilt-left hidden-scroll delay-100"
+          style="background-image: url('img/service_mani.png'); cursor: pointer;" onclick="openModal('maniModal')">
+          <div class="card-overlay">
+            <h4>Маникюр</h4>
+          </div>
+        </div>
+
+        <div class="service-card tilt-center hidden-scroll delay-200"
+          style="background-image: url('img/service_pedi.png'); cursor: pointer;" onclick="openModal('pediModal')">
+          <div class="card-overlay">
+            <h4>Педикюр</h4>
+          </div>
+        </div>
+
+        <div class="service-card tilt-right hidden-scroll delay-300"
+          style="background-image: url('img/service_ext.png'); cursor: pointer;" onclick="openModal('extModal')">
+          <div class="card-overlay">
+            <h4>Ноктопластика</h4>
+          </div>
+        </div>
+      </div>
+
+      <p class="service-footer-desc hidden-scroll delay-300">
+        Влезте в свят, в който всеки детайл е изработен с внимание, за да ви предложи атмосфера на чиста изтънченост. От
+        нашия спокоен и шикозен декор до нашите плюшени седалки, всеки аспект на салон за красота Max е проектиран да
+        издигне вашето
+        преживяване.
+      </p>
+
+      <!-- Minimalist Pricing Table hidden inside services context -->
+      <div class="pricing-minimal hidden-scroll delay-200" id="pricing">
+        <div class="pricing-col">
+          <div class="price-row"><span>Класически маникюр</span><span>€10</span></div>
+          <div class="price-row"><span>Френски маникюр</span><span>€15</span></div>
+          <div class="price-row"><span>Гел лак маникюр</span><span>€20</span></div>
+          <div class="price-row"><span>Ноктопластика</span><span>€35</span></div>
+        </div>
+        <div class="pricing-col">
+          <div class="price-row"><span>Класически педикюр</span><span>€15</span></div>
+          <div class="price-row"><span>Гел лак педикюр</span><span>€25</span></div>
+          <div class="price-row"><span>Перманентен френски</span><span>€40</span></div>
+          <div class="price-row"><span>Декорация (на нокът)</span><span>€1</span></div>
         </div>
       </div>
     </div>
   </section>
-  <section class="about bg-dark">
-    <div class="container">
-      <div class="grid-2">
-        <div class="center small"><i class="fas fa-credit-card fa-10x"></i></div>
-        <div>
-          <h3>Цени</h3>
-          <table>
-            <tr>
-              <th>
-                <h3>Маникюр</h3>
-              </th>
-            </tr>
-            <tr>
-              <td>Маникюр, лак</td>
-              <td>14.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Маникюр</td>
-              <td>11.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Лак</td>
-              <td>8.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Френски маникюр</td>
-              <td>16.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Маникюр с декорация</td>
-              <td>18.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Маникюр с Gelish</td>
-              <td>24.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Ноктопластика</td>
-              <td>50.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Поддръжка</td>
-              <td>25.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Изграждане с гел</td>
-              <td>60.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Гел</td>
-              <td>30.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Перманентен френски</td>
-              <td>60.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Перманентен – поддръжка</td>
-              <td>30.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Ноктопластика с акрил</td>
-              <td>60.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Поддръжка с акрил</td>
-              <td>30.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Декорация с акрил -1 нокът</td>
-              <td>3.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Декоративен камък 1бр.</td>
-              <td>0.50 лв.</td>
-            </tr>
 
-            <tr></tr>
-            <th>
-              <h3>Педикюр</h3>
-            </th>
-            </tr>
-            <tr>
-              <td>Педикюр с лак</td>
-              <td>25.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Педикюр</td>
-              <td>20.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Лак</td>
-              <td>8.00 лв.</td>
-            </tr>
-            <tr>
-              <td>Педикюр с Gelish</td>
-              <td>32.00 лв.</td>
-            </tr>
-          </table>
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container text-center py-section">
+      <h2 class="section-title hidden-scroll">ГАЛЕ<span class="stylized-letter">РИ</span>Я</h2>
+      <div class="gallery-3d-wrap hidden-scroll delay-100">
+        <button class="gallery-arrow gallery-arrow-left" id="gallery-prev" aria-label="Предишна">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="gallery-3d-container" id="gallery-container">
+          <!-- Dynamically populated by JS -->
+        </div>
+        <button class="gallery-arrow gallery-arrow-right" id="gallery-next" aria-label="Следваща">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Statue Section -->
+  <section class="contact-section" id="contact">
+    <div class="container py-section">
+      <div class="contact-split">
+        <div class="contact-form-side">
+          <h2 class="section-title text-left hidden-scroll">КОНТ<span class="stylized-letter">АК</span>ТИ</h2>
+          <form class="minimal-form hidden-scroll delay-100">
+            <div class="input-group">
+              <i class="far fa-user"></i>
+              <input type="text" placeholder="Вашето име" required>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-phone-alt"></i>
+              <input type="tel" placeholder="Вашият телефон" required>
+            </div>
+            <div class="input-group">
+              <i class="far fa-envelope"></i>
+              <input type="email" placeholder="Вашият имейл" required>
+            </div>
+            <div class="input-group" style="align-items: flex-start;">
+              <i class="far fa-comment-alt" style="margin-top: 0.3rem;"></i>
+              <textarea placeholder="Вашето съобщение (по избор)" rows="3"
+                style="border:none; background:transparent; width:100%; font-family:var(--font-body); font-size:1rem; outline:none; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid-gray">Запази час</button>
+          </form>
+          <div id="form-success" class="form-success-msg" style="display:none;">
+            <i class="fas fa-check-circle"></i> Благодарим Ви! Ще се свържем с Вас скоро.
+          </div>
+          <div class="contact-info-text hidden-scroll delay-200">
+            <p>Запазете своето специално маникюр изживяване от комфорта на вашия дом.</p>
+            <p class="mt-1"><strong>Телефон:</strong> +359 89 682 6094</p>
+            <p><strong>Адрес:</strong> Генерал Колев 7 А, Силистра, България, 7500</p>
+          </div>
+        </div>
+
+        <div class="contact-image-side hidden-scroll delay-300">
+          <img src="img/contact_statue.png" alt="Статуя с нокти">
         </div>
       </div>
     </div>
   </section>
-  <section id="gallery" class="bg-light">
-    <div class="container center">
 
+  <!-- Service Modals -->
+  <div id="maniModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('maniModal')">&times;</span>
+      <h3 class="modal-title">Маникюр</h3>
+      <div class="modal-body">
+        <p>Класическият и гел лак маникюр включва оформяне на нокътната плочка, почистване на кожичките, нанасяне на
+          база, желан цвят и топ лак. Предлагаме богат избор от прозрачни или матови цветове и ръчно рисувани декорации
+          за всеки вкус.</p>
+        <p style="margin-top: 1rem; font-weight: 500; color: var(--color-gray-text);">Времетраене: ~60 мин.</p>
+      </div>
+    </div>
+  </div>
 
-      <div>
-        <i class="fab fa-envira fa-2x "></i><span> Глерия</span>
-        <div class="gallery grid-4">
+  <div id="pediModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('pediModal')">&times;</span>
+      <h3 class="modal-title">Педикюр</h3>
+      <div class="modal-body">
+        <p>Спа педикюрът предлага пълна релаксация и грижа за вашите ходила. Включва релаксираща вана, внимателно
+          почистване на мъртвата кожа, прецизно оформяне на ноктите и нанасяне на дълготраен гел лак.</p>
+        <p style="margin-top: 1rem; font-weight: 500; color: var(--color-gray-text);">Времетраене: ~90 мин.</p>
+      </div>
+    </div>
+  </div>
 
-          <a href="img/nailart1.jpg" data-lightbox="mygallery"><img src="img/nailart1-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart2.jpg" data-lightbox="mygallery"><img src="img/nailart2-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart3.jpg" data-lightbox="mygallery"><img src="img/nailart3-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart4.jpg" data-lightbox="mygallery"><img src="img/nailart4-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart5.jpg" data-lightbox="mygallery"><img src="img/nailart5-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart6.jpg" data-lightbox="mygallery"><img src="img/nailart6-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart7.jpg" data-lightbox="mygallery"><img src="img/nailart7-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart8.jpg" data-lightbox="mygallery"><img src="img/nailart8-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart9.jpg" data-lightbox="mygallery"><img src="img/nailart9-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart10.jpg" data-lightbox="mygallery"><img src="img/nailart10-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart11.jpg" data-lightbox="mygallery"><img src="img/nailart11-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart12.jpg" data-lightbox="mygallery"><img src="img/nailart12-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart13.jpg" data-lightbox="mygallery"><img src="img/nailart13-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart14.jpg" data-lightbox="mygallery"><img src="img/nailart14-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart15.jpg" data-lightbox="mygallery"><img src="img/nailart15-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart16.jpg" data-lightbox="mygallery"><img src="img/nailart16-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart17.jpg" data-lightbox="mygallery"><img src="img/nailart17-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart18.jpg" data-lightbox="mygallery"><img src="img/nailart18-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart19.jpg" data-lightbox="mygallery"><img src="img/nailart19-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart20.jpg" data-lightbox="mygallery"><img src="img/nailart20-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart21.jpg" data-lightbox="mygallery"><img src="img/nailart21-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart22.jpg" data-lightbox="mygallery"><img src="img/nailart22-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart23.jpg" data-lightbox="mygallery"><img src="img/nailart23-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart24.jpg" data-lightbox="mygallery"><img src="img/nailart24-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart25.jpg" data-lightbox="mygallery"><img src="img/nailart25-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart26.jpg" data-lightbox="mygallery"><img src="img/nailart26-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart27.jpg" data-lightbox="mygallery"><img src="img/nailart27-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart28.jpg" data-lightbox="mygallery"><img src="img/nailart28-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart29.jpg" data-lightbox="mygallery"><img src="img/nailart29-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart30.jpg" data-lightbox="mygallery"><img src="img/nailart30-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart31.jpg" data-lightbox="mygallery"><img src="img/nailart31-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart32.jpg" data-lightbox="mygallery"><img src="img/nailart32-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart33.jpg" data-lightbox="mygallery"><img src="img/nailart33-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart34.jpg" data-lightbox="mygallery"><img src="img/nailart34-small.jpg" alt="Nail Art Gallery"></a>
-          <a href="img/nailart35.jpg" data-lightbox="mygallery"><img src="img/nailart35-small.jpg" alt="Nail Art Gallery"></a>
+  <div id="extModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('extModal')">&times;</span>
+      <h3 class="modal-title">Ноктопластика</h3>
+      <div class="modal-body">
+        <p>Изграждането на нокти с гел или акрил гарантира перфектна форма, здравина и стилна дължина. Подходящо за
+          чупливи нокти или за дами, които искат дълъг, елегантен и модерен маникюр.</p>
+        <p style="margin-top: 1rem; font-weight: 500; color: var(--color-gray-text);">Времетраене: ~120 мин.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimalist Footer -->
+  <footer class="footer-minimal">
+    <div class="container footer-split">
+      <div class="footer-brand">BEAUTY SALON MAX</div>
+      <div class="footer-links">
+        <a href="privacy.html">ПОЛИТИКА ЗА ПОВЕРИТЕЛНОСТ</a>
+        <a href="cookies.html">ПОЛИТИКА ЗА БИСКВИТКИ</a>
+      </div>
+      <div class="footer-contact">
+        <p>СВЪРЖЕТЕ СЕ С НАС</p>
+        <p>ИМЕЙЛ: innatodorova@gmail.com</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/NailArtInnaTodorova/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
-
-  </section>
-  <footer class="center bg-dark about">
-    <p> Nail Art Silistra | Inna Todorova &copy; 2019 <br> <a href="https://www.facebook.com/NailArtInnaTodorova/"
-        target="_blank"><i class="fab fa-facebook-square fa-2x about"></a></i></p>
   </footer>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Този сайт използва бисквитки за подобряване на изживяването.
+      <a href="cookies.html">Научете повече</a>
+    </p>
+    <button id="cookie-accept" class="btn-solid-gray">Приемам</button>
+  </div>
+
+  <!-- Floating Phone Button -->
+  <a href="tel:+359896826094" class="floating-phone" aria-label="Обадете се">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Нагоре">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+  <script>
+    // =========================================================================
+    // Smooth scrolling for anchor links
+    // =========================================================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // =========================================================================
+    // Modal Popup Logic
+    // =========================================================================
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+      }
+    };
+
+    // =========================================================================
+    // Intersection Observer for scroll animations
+    // =========================================================================
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('hidden-scroll')) {
+            entry.target.classList.add('show-scroll');
+          } else if (entry.target.classList.contains('pop-in')) {
+            entry.target.classList.add('show-pop-in');
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.hidden-scroll, .pop-in').forEach((el) => {
+      observer.observe(el);
+    });
+
+    // =========================================================================
+    // Preloader + Scroll Sequence Logic for 360 Bottle
+    // =========================================================================
+    const preloaderFill = document.getElementById('preloader-fill');
+    const preloaderPercent = document.getElementById('preloader-percent');
+    const preloaderEl = document.getElementById('preloader');
+
+    const canvas = document.getElementById("bottle-canvas");
+    const context = canvas.getContext("2d");
+    const frameCount = 192;
+    const currentFrame = index => `../imgs/bottles/${(index + 1).toString().padStart(5, '0')}.jpg`;
+
+    const images = [];
+    let imagesLoaded = 0;
+
+    for (let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      img.src = currentFrame(i);
+      img.onload = () => {
+        imagesLoaded++;
+        const pct = Math.round((imagesLoaded / frameCount) * 100);
+        if (preloaderFill) preloaderFill.style.width = pct + '%';
+        if (preloaderPercent) preloaderPercent.textContent = pct + '%';
+
+        if (imagesLoaded === 1) {
+          canvas.width = img.width;
+          canvas.height = img.height;
+          context.drawImage(img, 0, 0);
+        }
+        if (imagesLoaded === frameCount) {
+          preloaderEl.classList.add('hidden');
+          document.body.classList.add('loaded');
+        }
+      };
+      images.push(img);
+    }
+
+    // Fallback: hide preloader after 8s even if images didn't all load
+    setTimeout(() => {
+      if (!preloaderEl.classList.contains('hidden')) {
+        preloaderEl.classList.add('hidden');
+        document.body.classList.add('loaded');
+      }
+    }, 8000);
+
+    const scrollSection = document.querySelector('.scroll-sequence-section');
+    const overlayText = document.getElementById('bottle-text');
+
+    let currentFrameIndex = 0;
+    let isAutoPlaying = false;
+    let autoPlayDirection = 1;
+    let autoPlaySpeed = 0.5;
+    let exactFrameIndex = 0;
+    let animationFrameId = null;
+
+    function drawFrame(index) {
+      if (images[index] && images[index].complete) {
+        canvas.width = images[index].width;
+        canvas.height = images[index].height;
+        context.drawImage(images[index], 0, 0);
+      }
+    }
+
+    function autoPlayLoop() {
+      if (!isAutoPlaying) return;
+      exactFrameIndex += (autoPlaySpeed * autoPlayDirection);
+      if (exactFrameIndex >= frameCount - 1) {
+        exactFrameIndex = frameCount - 1;
+        autoPlayDirection = -1;
+      } else if (exactFrameIndex <= 0) {
+        exactFrameIndex = 0;
+        autoPlayDirection = 1;
+      }
+      currentFrameIndex = Math.floor(exactFrameIndex);
+      drawFrame(currentFrameIndex);
+      animationFrameId = requestAnimationFrame(autoPlayLoop);
+    }
+
+    scrollSection.addEventListener('click', () => {
+      isAutoPlaying = !isAutoPlaying;
+      if (isAutoPlaying) {
+        if (overlayText) overlayText.style.opacity = "0";
+        exactFrameIndex = currentFrameIndex;
+        autoPlayLoop();
+      } else {
+        cancelAnimationFrame(animationFrameId);
+        const scrollTop = window.scrollY - scrollSection.offsetTop;
+        if (scrollTop <= 10 && overlayText) {
+          overlayText.style.opacity = "1";
+        }
+      }
+    });
+
+    // =========================================================================
+    // Consolidated Scroll Handler (navbar, back-to-top, bottle)
+    // =========================================================================
+    const navbar = document.querySelector('.navbar');
+    const backToTop = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      // Sticky navbar effect
+      if (scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // Back to top visibility
+      if (scrollY > 600) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+
+      // Bottle scroll sequence
+      if (scrollSection && !isAutoPlaying) {
+        const scrollTop = scrollY - scrollSection.offsetTop;
+        const maxScrollTop = scrollSection.scrollHeight - window.innerHeight;
+        let scrollFraction = Math.max(0, Math.min(1, scrollTop / maxScrollTop));
+
+        if (scrollFraction > 0.05) {
+          overlayText.style.opacity = "0";
+        } else {
+          overlayText.style.opacity = "1";
+        }
+
+        currentFrameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount));
+        requestAnimationFrame(() => drawFrame(currentFrameIndex));
+      }
+    });
+
+    // Back to top click
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // =========================================================================
+    // Navbar Active Link Highlighting (Scroll Spy)
+    // =========================================================================
+    const sections = document.querySelectorAll('section[id]');
+    const navLinksAll = document.querySelectorAll('.nav-menu .nav-link');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinksAll.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    // =========================================================================
+    // 3D Coverflow Gallery Logic
+    // =========================================================================
+    const portfolioImages = ["489693342_1486171459017258_538893046594482594_n.jpg", "489694734_1486171315683939_4269064578391561240_n.jpg", "489785369_1486171365683934_6744541827203221842_n.jpg", "489890126_1487117502255987_9091339330774175615_n.jpg", "489900449_1486171495683921_969019448368307054_n.jpg", "489912802_1487124302255307_8637091907213576448_n.jpg", "490090359_1487124495588621_4646177405226864607_n.jpg", "490102877_1486664825634588_7310846714461174360_n.jpg", "490113005_1487117485589322_7114252861278147638_n.jpg", "490153799_1487117445589326_3969850598583495211_n.jpg", "490263111_1487124308921973_6387616753851214123_n.jpg", "490281586_1486171562350581_7844271286392208022_n.jpg", "490341311_1486664992301238_4720646618992275582_n.jpg", "492198637_1499451614355909_5304680954818020965_n.jpg", "493042512_1499448094356261_1315486605532982286_n.jpg", "493722540_1499451014355969_2693072597451849837_n.jpg", "518352998_1566256331008770_8735291502072056174_n.jpg", "518594415_1566256397675430_3687997594808174882_n.jpg", "519587457_1566256324342104_425268276471234794_n.jpg", "519985511_1566256277675442_2525984861839893728_n.jpg", "520150387_1566256284342108_3813565797012488131_n.jpg", "526013176_1580650572902679_1566913234096934087_n.jpg", "526489698_1580650606236009_4738761301093746951_n.jpg", "526746828_1580650429569360_5022549539305209829_n.jpg", "526802855_1580650326236037_1221637685953636868_n.jpg", "527081316_1580650502902686_4678637239799100290_n.jpg", "527594509_1580650266236043_324416233343203059_n.jpg"];
+    const galleryContainer = document.getElementById('gallery-container');
+    let activeIndex = Math.floor(portfolioImages.length / 2);
+    let isDragging = false;
+    let startX = 0;
+    let lastWheelTime = 0;
+
+    // Create elements dynamically with lazy loading + alt tags
+    portfolioImages.forEach((imgSrc, index) => {
+      const item = document.createElement('a');
+      item.href = `../imgs/portfolio/${imgSrc}`;
+      item.setAttribute("data-lightbox", "portfolio");
+      item.className = 'gallery-3d-item';
+      item.dataset.index = index;
+
+      const img = document.createElement('img');
+      img.src = `../imgs/portfolio/${imgSrc}`;
+      img.loading = 'lazy';
+      img.alt = 'Маникюр галерия ' + (index + 1);
+
+      item.appendChild(img);
+      galleryContainer.appendChild(item);
+    });
+
+    const items = document.querySelectorAll('.gallery-3d-item');
+
+    function updateGallery() {
+      items.forEach((item, i) => {
+        let offset = i - activeIndex;
+        let absOffset = Math.abs(offset);
+        let translateX = offset * 220;
+        let scale = 1;
+        let rotateY = 0;
+        let zIndex = 100 - absOffset;
+        let opacity = 1;
+
+        if (offset === 0) {
+          scale = 1; rotateY = 0; opacity = 1;
+          item.style.pointerEvents = 'auto';
+        } else if (offset > 0) {
+          scale = 1 - (absOffset * 0.15);
+          rotateY = -45;
+          translateX -= 120 * absOffset;
+          opacity = 1 - (absOffset * 0.2);
+          item.style.pointerEvents = 'none';
+        } else if (offset < 0) {
+          scale = 1 - (absOffset * 0.15);
+          rotateY = 45;
+          translateX += 120 * absOffset;
+          opacity = 1 - (absOffset * 0.2);
+          item.style.pointerEvents = 'none';
+        }
+
+        if (absOffset > 4) opacity = 0;
+
+        item.style.transform = `translateX(${translateX}px) translateZ(${-absOffset * 150}px) rotateY(${rotateY}deg) scale(${scale})`;
+        item.style.zIndex = zIndex;
+        item.style.opacity = opacity;
+      });
+    }
+
+    updateGallery();
+
+    // Gallery Arrow Navigation
+    document.getElementById('gallery-prev').addEventListener('click', () => {
+      if (activeIndex > 0) { activeIndex--; updateGallery(); }
+    });
+    document.getElementById('gallery-next').addEventListener('click', () => {
+      if (activeIndex < items.length - 1) { activeIndex++; updateGallery(); }
+    });
+
+    // Swipe / Drag / Click logic
+    const wrap = document.querySelector('.gallery-3d-wrap');
+    let hasDragged = false;
+
+    wrap.addEventListener('mousedown', e => {
+      isDragging = true; hasDragged = false; startX = e.clientX;
+    });
+    wrap.addEventListener('touchstart', e => {
+      isDragging = true; hasDragged = false; startX = e.touches[0].clientX;
+    }, { passive: true });
+    wrap.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      if (Math.abs(startX - e.clientX) > 10) hasDragged = true;
+    });
+    wrap.addEventListener('touchmove', e => {
+      if (!isDragging) return;
+      if (Math.abs(startX - e.touches[0].clientX) > 10) hasDragged = true;
+    }, { passive: true });
+    wrap.addEventListener('mouseup', handleGesture);
+    wrap.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      processSwipe(startX - e.changedTouches[0].clientX);
+    });
+    wrap.addEventListener('click', e => {
+      if (hasDragged) { e.preventDefault(); e.stopPropagation(); hasDragged = false; }
+    }, true);
+
+    function handleGesture(e) {
+      if (!isDragging) return;
+      isDragging = false;
+      processSwipe(startX - e.clientX);
+    }
+
+    function processSwipe(diff) {
+      if (Math.abs(diff) > 30) {
+        if (diff > 0 && activeIndex < items.length - 1) activeIndex++;
+        else if (diff < 0 && activeIndex > 0) activeIndex--;
+        updateGallery();
+      }
+    }
+
+    wrap.addEventListener('wheel', e => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) return;
+      e.preventDefault();
+      const now = Date.now();
+      if (now - lastWheelTime < 100) return;
+      lastWheelTime = now;
+      if (e.deltaX > 0 && activeIndex < items.length - 1) { activeIndex++; updateGallery(); }
+      else if (e.deltaX < 0 && activeIndex > 0) { activeIndex--; updateGallery(); }
+    }, { passive: false });
+
+    // =========================================================================
+    // Mobile Hamburger Menu Logic
+    // =========================================================================
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinksList = document.querySelectorAll('.nav-link');
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = hamburger.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+
+      navLinksList.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          const icon = hamburger.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        });
+      });
+    }
+
+    // =========================================================================
+    // Contact Form Submission Feedback
+    // =========================================================================
+    const contactForm = document.querySelector('.minimal-form');
+    const formSuccess = document.getElementById('form-success');
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      this.style.display = 'none';
+      formSuccess.style.display = 'block';
+      setTimeout(() => {
+        formSuccess.style.display = 'none';
+        contactForm.reset();
+        contactForm.style.display = 'block';
+      }, 5000);
+    });
+
+    // =========================================================================
+    // Cookie Consent Banner
+    // =========================================================================
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+
+    if (localStorage.getItem('cookiesAccepted')) {
+      cookieBanner.classList.add('hidden');
+    }
+
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      cookieBanner.classList.add('hidden');
+    });
+
+  </script>
 </body>
 
 </html>
