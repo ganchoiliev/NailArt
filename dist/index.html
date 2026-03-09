@@ -30,7 +30,8 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Салон за красота Max | Инна Тодорова - Силистра">
-  <meta property="og:description" content="Премиум маникюр и педикюр студио в Силистра. Класически маникюр, гел лак, ноктопластика и педикюр.">
+  <meta property="og:description"
+    content="Премиум маникюр и педикюр студио в Силистра. Класически маникюр, гел лак, ноктопластика и педикюр.">
   <meta property="og:image" content="https://nailart.cc/img/hero_plum.png">
   <meta property="og:url" content="https://nailart.cc/">
   <meta property="og:type" content="website">
@@ -388,7 +389,7 @@
     const canvas = document.getElementById("bottle-canvas");
     const context = canvas.getContext("2d");
     const frameCount = 192;
-    const currentFrame = index => `../imgs/bottles/${(index + 1).toString().padStart(5, '0')}.jpg`;
+    const currentFrame = index => `img/bottles/${(index + 1).toString().padStart(5, '0')}.jpg`;
 
     const images = [];
     let imagesLoaded = 0;
@@ -551,13 +552,13 @@
     // Create elements dynamically with lazy loading + alt tags
     portfolioImages.forEach((imgSrc, index) => {
       const item = document.createElement('a');
-      item.href = `../imgs/portfolio/${imgSrc}`;
+      item.href = `img/portfolio/${imgSrc}`;
       item.setAttribute("data-lightbox", "portfolio");
       item.className = 'gallery-3d-item';
       item.dataset.index = index;
 
       const img = document.createElement('img');
-      img.src = `../imgs/portfolio/${imgSrc}`;
+      img.src = `img/portfolio/${imgSrc}`;
       img.loading = 'lazy';
       img.alt = 'Маникюр галерия ' + (index + 1);
 
