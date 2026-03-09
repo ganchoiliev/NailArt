@@ -17,14 +17,19 @@ jobs:
         run: sudo apt-get install -y lftp
 
       - name: Deploy via FTP
+        env:
+          FTP_USER: ${{ secrets.FTP_USERNAME }}
+          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ${{ secrets.FTP_SERVER }}
         run: |
-          lftp -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" ${{ secrets.FTP_SERVER }} <<EOF
+          lftp <<EOF
           set ssl:verify-certificate no
           set ftp:ssl-allow yes
           set ftp:ssl-force no
           set ftp:passive-mode yes
           set net:timeout 60
           set net:max-retries 3
+          open -u "${FTP_USER}","${FTP_PASS}" "${FTP_HOST}"
           mirror --reverse --delete --verbose ./dist/ /public_html/
           quit
           EOF
